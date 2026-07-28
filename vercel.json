@@ -1,0 +1,64 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "npm ci --ignore-scripts",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "cleanUrls": true,
+  "trailingSlash": true,
+  "regions": ["iad1"],
+  "functions": {
+    "api/**/*.js": {
+      "maxDuration": 15,
+      "memory": 1024
+    }
+  },
+  "redirects": [
+    { "source": "/cars", "destination": "/cars/", "permanent": true },
+    { "source": "/saved-cars", "destination": "/saved/", "permanent": true },
+    { "source": "/saved-cars/:path*", "destination": "/saved/", "permanent": true },
+    { "source": "/test-drive", "destination": "/test-drive/", "permanent": true },
+    { "source": "/reservations", "destination": "/reservations/", "permanent": true },
+    { "source": "/sign-in", "destination": "/about/", "permanent": false },
+    { "source": "/sign-up", "destination": "/about/", "permanent": false },
+    { "source": "/admin/cars", "destination": "/admin/inventory/", "permanent": true },
+    { "source": "/admin/test-drives", "destination": "/admin/test-drives/", "permanent": true },
+    { "source": "/admin/settings", "destination": "/admin/settings/", "permanent": true }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Content-Security-Policy", "value": "default-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; connect-src 'self'; font-src 'self'; manifest-src 'self'; worker-src 'self'; frame-src 'none'; media-src 'none'; upgrade-insecure-requests" },
+        { "key": "Strict-Transport-Security", "value": "max-age=63072000; includeSubDomains; preload" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" },
+        { "key": "Cross-Origin-Resource-Policy", "value": "same-origin" },
+        { "key": "Permissions-Policy", "value": "geolocation=(), camera=(), microphone=(), payment=(), usb=(), browsing-topics=()" },
+        { "key": "X-DNS-Prefetch-Control", "value": "off" },
+        { "key": "X-Permitted-Cross-Domain-Policies", "value": "none" }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400, stale-while-revalidate=604800" }
+      ]
+    },
+    {
+      "source": "/sw.js",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store, max-age=0" },
+        { "key": "Service-Worker-Allowed", "value": "/" }
+      ]
+    },
+    {
+      "source": "/api/health",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store" }
+      ]
+    }
+  ]
+}

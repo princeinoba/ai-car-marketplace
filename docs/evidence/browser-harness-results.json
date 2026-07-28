@@ -1,0 +1,99 @@
+[
+  {
+    "case": "home-desktop",
+    "main": 1,
+    "h1": 1,
+    "bodyText": 2208,
+    "overflow": false,
+    "unnamedButtons": 0,
+    "badImages": 0,
+    "consoleErrors": [],
+    "pageErrors": []
+  },
+  {
+    "case": "cars-mobile",
+    "main": 1,
+    "h1": 1,
+    "bodyText": 2247,
+    "overflow": false,
+    "unnamedButtons": 0,
+    "badImages": 0,
+    "consoleErrors": [],
+    "pageErrors": []
+  },
+  {
+    "case": "vehicle-desktop",
+    "main": 1,
+    "h1": 1,
+    "bodyText": 2000,
+    "overflow": false,
+    "unnamedButtons": 0,
+    "badImages": 0,
+    "consoleErrors": [],
+    "pageErrors": []
+  },
+  {
+    "case": "match-desktop",
+    "main": 1,
+    "h1": 1,
+    "bodyText": 1397,
+    "overflow": false,
+    "unnamedButtons": 0,
+    "badImages": 0,
+    "consoleErrors": [],
+    "pageErrors": []
+  },
+  {
+    "case": "finance-tablet",
+    "main": 1,
+    "h1": 1,
+    "bodyText": 1147,
+    "overflow": false,
+    "unnamedButtons": 0,
+    "badImages": 0,
+    "consoleErrors": [],
+    "pageErrors": []
+  },
+  {
+    "case": "admin-desktop",
+    "main": 1,
+    "h1": 1,
+    "bodyText": 1029,
+    "overflow": false,
+    "unnamedButtons": 0,
+    "badImages": 0,
+    "consoleErrors": [],
+    "pageErrors": []
+  },
+  {
+    "case": "404-mobile",
+    "main": 1,
+    "h1": 1,
+    "bodyText": 675,
+    "overflow": false,
+    "unnamedButtons": 0,
+    "badImages": 0,
+    "consoleErrors": [],
+    "pageErrors": []
+  },
+  {
+    "interaction": "cars",
+    "initial": 12,
+    "electric": 3,
+    "saved": "1",
+    "compared": "1"
+  },
+  {
+    "interaction": "match",
+    "results": 3
+  },
+  {
+    "interaction": "finance",
+    "initial": "$908 / month",
+    "zeroRate": "$764 / month"
+  },
+  {
+    "interaction": "admin",
+    "stored": true
+  }
+]

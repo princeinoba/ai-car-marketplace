@@ -1,0 +1,20 @@
+Managed browser direct-navigation limitation
+Review date: 27 July 2026
+
+The managed Chromium policy blocked all URL navigation before application code ran:
+
+  Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR
+  URLBlocklist: ["*"]
+
+The policy was not bypassed. The exact generated HTML, CSS, local images and production browser modules were instead verified with a managed Chromium set-content harness. See browser-harness-results.json and the PNG captures in this directory.
+
+Because direct HTTP navigation was blocked, this audit does not claim:
+- Lighthouse scores;
+- navigated-page axe results;
+- true URL-to-URL browser navigation;
+- runtime service-worker registration/update;
+- true offline navigation;
+- install-prompt behaviour;
+- runtime CSP console validation.
+
+Those checks remain mandatory on an unrestricted HTTPS Vercel Preview.
