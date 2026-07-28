@@ -1,0 +1,19 @@
+{
+  "name": "DriveLens Market Lab",
+  "short_name": "DriveLens",
+  "description": "AI-assisted fictional Canadian vehicle discovery and test-drive planning.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f8faff",
+  "theme_color": "#155eef",
+  "icons": [
+    {"src":"/assets/icons/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any maskable"},
+    {"src":"/assets/icons/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}
+  ],
+  "shortcuts": [
+    {"name":"Browse vehicles","url":"/cars/","icons":[{"src":"/assets/icons/icon-192.png","sizes":"192x192"}]},
+    {"name":"Smart Match","url":"/match/","icons":[{"src":"/assets/icons/icon-192.png","sizes":"192x192"}]},
+    {"name":"Saved vehicles","url":"/saved/","icons":[{"src":"/assets/icons/icon-192.png","sizes":"192x192"}]}
+  ]
+}
