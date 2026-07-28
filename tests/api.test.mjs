@@ -89,6 +89,7 @@ test("photo match normalizes a successful Gemini response without exposing key",
   assert.match(requestBody, /accident history, roadworthiness, safety/);
   assert.match(requestBody, /"responseSchema"/);
   assert.match(requestBody, /"maxOutputTokens":320/);
+  assert.match(requestBody, /"thinkingConfig":\{"thinkingBudget":0\}/);
   globalThis.fetch = previousFetch;
   if (previousKey) process.env.GEMINI_API_KEY = previousKey; else delete process.env.GEMINI_API_KEY;
 });
